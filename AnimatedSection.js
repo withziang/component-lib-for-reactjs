@@ -26,7 +26,7 @@ export const FadeIn = ({ children, delay = 0 }) => {
   );
 };
 
-const SlideIn = ({ children, direction = "left", delay = 0 }) => {
+export const SlideIn = ({ children, direction = "left", delay = 0 }) => {
   const xValue = direction === "left" ? -50 : 50;
   
   return (
@@ -40,7 +40,7 @@ const SlideIn = ({ children, direction = "left", delay = 0 }) => {
   );
 };
 
-const ScaleUp = ({ children, delay = 0 }) => {
+export const ScaleUp = ({ children, delay = 0 }) => {
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0.8 }}
@@ -53,7 +53,7 @@ const ScaleUp = ({ children, delay = 0 }) => {
 };
 
 
-const HoverLift = ({ children }) => {
+export const HoverLift = ({ children }) => {
   return (
     <motion.div
       whileHover={{ scale: 1.05, y: -5 }}
@@ -65,7 +65,7 @@ const HoverLift = ({ children }) => {
 };
 
 
-const StaggeredList = ({ children }) => {
+export const StaggeredList = ({ children }) => {
   return (
     <motion.div
       initial="hidden"
@@ -84,7 +84,7 @@ const StaggeredList = ({ children }) => {
 };
 
 
-const RevealOnScroll = ({ children }) => {
+export const RevealOnScroll = ({ children }) => {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
 
   return (
